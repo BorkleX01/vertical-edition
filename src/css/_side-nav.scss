@@ -1,0 +1,139 @@
+.static-side-nav {
+    position: static;
+    text-align: left;
+
+    @media (min-width: $breakpoint-tablet + 1) {
+        display: none;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        display: block;
+    }
+}
+
+.fixed-side-nav {
+    position: fixed;
+    top: 4rem;
+    margin-top: 4rem;
+    width: 200px;
+    z-index: 5;
+    left: 2rem;
+    visibility: hidden;
+
+    @media (max-width: $breakpoint-max) {
+        width: 180px;
+        left: 1rem;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        display: none;
+    }
+}
+
+.side-nav { 
+    @media (max-width: $breakpoint-tablet) {
+        border-top: 1px dotted $color-gray;
+        padding-top: 2rem;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        text-align: center;
+    }
+
+    img {
+        @media (min-width: $breakpoint-tablet + 1) {
+            width: 60%;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            width: 150px;
+        }
+    }
+
+    h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+        margin-top: 0.5rem;
+
+        @media (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) {
+            margin-top: 0;
+        }
+    }
+
+    .share-icons {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        justify-content: flex-start;
+
+        @media (max-width: $breakpoint-tablet) {
+            justify-content: center;
+        }
+    }
+
+    &-heading {
+        text-transform: uppercase;
+        color: $color-blue-afr; 
+        font-size: 0.7rem;
+        margin: 0 0 0.25rem 1rem;
+    }
+
+    &-title {
+        font-family: SecuaHD;
+        font-weight: normal;
+        margin: 0 0 1rem 1rem;
+    }
+
+    &-dot {
+        width: 8px;
+        height: 8px;
+        background-color: lighten($color-gray, 25%);
+        border-radius: 50%;
+        top: 2px;
+        left: 0;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &-items {
+        padding: 0 0 0.5rem;
+
+        @media (max-width: $breakpoint-tablet) {
+            text-align: left;
+        }
+    }
+
+    &-item {
+        position: relative;
+        border: 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 0;
+            bottom: -1.25rem;
+            border-left: 2px dotted lighten($color-gray, 25%);
+        }
+
+        &:first-of-type {
+            &:after {
+                border-left: 2px solid $color-blue-afr;
+            }
+
+            .side-nav-dot {
+                background-color: $color-blue-afr;
+            }
+        }
+
+        &:last-of-type {
+            &:after {
+                bottom: -0.5rem;
+            }
+        }
+    }
+}
+
+.afr-button + .side-nav {
+    margin-top: 3rem;
+}

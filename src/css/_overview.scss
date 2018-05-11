@@ -1,0 +1,245 @@
+.overview {
+    & > header {
+    	background-color: $color-blue-dark;
+    	padding-top: 167px;
+
+		@media (max-width: $breakpoint-mobile) {
+	    	padding-top: 75px;
+	    }
+    }
+
+	#grid {
+		background-color: white;
+	}
+
+	&-top {
+		position: relative;
+		color: white; 
+
+		&-bg {
+			background-color: $color-blue-dark;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			z-index: 0;
+
+			@media (max-width: $breakpoint-mobile) {
+				bottom: 20%;
+			}
+		}
+
+		&-inner {
+			margin: 0 auto;
+			display: flex;
+			max-width: $breakpoint-max;
+			padding: 6rem;
+			position: relative;
+			z-index: 1;
+
+			@media (max-width: $breakpoint-tablet) {
+				width: 100%;
+				padding: 4rem 2.5rem 3rem;
+			}
+
+			@media (max-width: $breakpoint-mobile) {
+				display: block;
+				text-align: center;
+				padding: 2.5rem 1rem 2rem;
+			}
+		}
+
+		&-left {
+			flex-basis: 50%;
+
+			.h3 {
+				font-weight: normal;
+			}
+
+			@media (max-width: $breakpoint-tablet) {
+				flex-basis: 65%;
+			}
+
+			@media (max-width: $breakpoint-mobile) {
+				width: 100%;
+			}
+		}
+
+		&-right {
+			flex-basis: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img {
+				max-width: 100%;
+				width: auto;
+			}
+
+			@media (max-width: $breakpoint-tablet) {
+				flex-basis: 35%;
+				padding-left: 2rem;
+			}
+
+			@media (max-width: $breakpoint-mobile) {
+				width: 100%;
+				padding: 1rem 0 2rem;
+
+				img {
+					max-width: 80%;
+				}
+			}
+		}
+
+		.share-icons {
+			justify-content: flex-start;
+			margin: 2rem 0 2rem;
+
+			@media (max-width: $breakpoint-mobile) {
+				justify-content: center;
+			}
+
+			.social-icon {
+				circle {
+					stroke: rgba($color-white, 0.75) !important;
+					transition: stroke 0.2s ease-in-out;
+					fill: transparent !important;
+				}
+
+				path {
+					fill: $color-white;
+				}
+			}
+
+			.SocialMediaShareButton {
+				cursor: pointer;
+
+				&:hover {
+					.social-icon {
+						circle {
+							stroke: rgba($color-white, 1) !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-grid {
+		margin: 0 auto;
+		max-width: $breakpoint-max;
+		background-color: white;
+		position: relative;
+		padding: 6rem 6rem 3rem;
+
+		@media (max-width: $breakpoint-tablet) {
+			padding: 4rem 2.5rem 3rem;
+		}
+
+		@media (max-width: $breakpoint-mobile) {
+			padding: 2.5rem 1rem 2rem;
+		}
+
+		&-inner {
+			margin-left: -1rem;
+			margin-right: 0;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+		}
+
+		.grid-item {
+		    text-align: center;
+		    text-decoration: none;
+		    text-align: left;
+		    flex-basis: 25%;
+		    padding: 0 0 1rem 1rem;
+		    overflow: hidden;
+		    height: 100%;
+
+		    @media (max-width: $breakpoint-tablet) {
+		    	flex-basis: 33.3333333%;
+		    }
+
+		    @media (max-width: $breakpoint-mobile) {
+		    	flex-basis: 50%;
+		    }
+			
+			a {
+			    text-decoration: none;
+
+			    &:hover {
+			    	.grid-item-thumb-overlay {
+			    		opacity: 0.25;
+			    	}
+
+			    	.grid-item-title {
+			    		text-decoration: underline;
+			    	}
+			    }
+			}
+
+			img {
+				top: 50%;
+				left: 50%;
+				height: 110%;
+				max-width: none;
+				position: absolute;
+				transform: translate(-50%, -50%);
+			}
+
+			&-thumb {
+			    overflow: hidden;
+			    text-align: center;
+			  	position: relative;
+			  	padding-top: 65%;
+			  	background-color: lighten($color-gray, 10%);
+				transform: translate3d(0,0,0);
+
+			  	&-overlay {
+			  		background-color: darken($color-blue-afr, 10%);
+			  		opacity: 0;
+			  		transition: opacity 0.2s ease-in-out;
+			  		z-index: 2;
+			  		top: 0;
+			  		left: 0;
+			  		right: 0;
+			  		bottom: 0;
+			  		position: absolute;
+			  	}
+
+			  	&-bg {
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+					filter: blur(30px);
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
+			}
+
+			&-heading{
+			    text-transform: uppercase;
+			    font-weight: bold;
+			    color: $color-blue-afr;
+				font-family: SeucaSans;
+				margin: 0.5rem 0 0.25rem;
+				font-size: 0.75rem;
+			}
+
+			&-title {
+			    margin: 0 1rem 1rem 0;
+			    color: $color-base;
+
+			    @media (max-width: $breakpoint-mobile) {
+			    	font-size: 0.9rem;
+			    	margin-right: 0;
+			    }
+			}
+		}
+	}
+}

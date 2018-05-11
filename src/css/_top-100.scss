@@ -1,0 +1,150 @@
+.top100 {
+    &-container {
+        border-top: 1px solid lighten($color-gray, 40%);
+    }
+
+    .post {
+        padding-top: 0;
+    }
+
+    .post-body {
+        padding-top: 3rem;
+
+        @media (max-width: $breakpoint-tablet) {
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    .footnote {
+        color: $color-gray;
+        font-family: SeucaSans;
+        margin: 3rem 0 0;
+    }
+
+    .table {
+        &-row {
+            display: flex;
+            align-items: flex-end;
+            border-bottom: 1px solid $color-blue-afr;
+            padding: 1rem 0;
+
+            @media (max-width: $breakpoint-mobile) {
+                padding: 1rem 0 0.75rem;
+            }
+
+            & > div {
+                flex-grow: 0;
+                flex-shrink: 0;
+                vertical-align: bottom;
+            }
+
+            .organisation {
+                flex-grow: 1;
+                flex-shrink: 1;
+                font-size: 1.2rem;
+                line-height: 1;
+                font-weight: bold;
+                min-width: 1rem;
+                padding-right: 0.5rem;
+
+                @media (max-width: $breakpoint-mobile) {
+                    font-size: 1rem;
+                }
+            }
+
+            .rank {
+                flex-basis: 7rem;
+                font-size: 3rem;
+                line-height: 0.8;
+                color: lighten($color-gray, 20%);
+                font-weight: bold;
+                padding-right: 1rem;
+                position: relative;
+                text-align: right;
+
+                &:after {
+                    content: '';
+                    height: 2rem;
+                    width: 0;
+                    border-left: 2px solid $color-blue-afr;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    transform: rotate(30deg);
+                }
+
+                @media (max-width: $breakpoint-mobile) {
+                    font-size: 2rem;
+                    line-height: 0.75;
+                    flex-basis: 5.5rem;
+                    padding-right: 1.3rem;
+
+                    &:after {
+                        right: 0.25rem;
+                        height: 1.7rem;
+                    }
+                }
+            }
+
+            .percentage {
+                flex-basis: 6rem;
+                font-size: 1.3rem;
+                line-height: 1;
+                text-align: right;
+                font-weight: bold;
+
+                @media (max-width: $breakpoint-mobile) {
+                    flex-basis: 3.5rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        &-header {
+            display: flex;
+            align-items: flex-end;
+
+            & > div {
+                font-size: 0.8rem;
+                line-height: 1.2;
+                font-weight: normal;
+                color: $color-gray;
+                font-family: SeucaSans;
+
+                @media (max-width: $breakpoint-mobile) {
+                    font-size: 0.7rem;
+                }
+            }
+
+            .organisation {
+                flex-grow: 1;
+            }
+
+            .rank {
+                flex-basis: 7rem;
+                padding-right: 1rem;
+                text-align: right;
+
+                @media (max-width: $breakpoint-mobile) {
+                    flex-basis: 3.5rem;
+                    padding: 0;
+                }
+            }
+
+            .percentage {
+                text-align: right;
+                flex-basis: 6rem;
+                
+                @media (max-width: $breakpoint-mobile) {
+                    flex-basis: 5rem;
+                }
+            }
+        }
+    }
+}

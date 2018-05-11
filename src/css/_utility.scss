@@ -1,0 +1,39 @@
+.hidden-mobile {
+	@media (max-width: $breakpoint-mobile) {
+		display: none;
+	}
+}
+
+.hidden-tablet {
+	@media (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) {
+		display: none;
+	}
+}
+
+.hidden-desktop {
+	@media (min-width: $breakpoint-tablet + 1) {
+		display: none;
+	}
+}
+
+.alignright {
+    padding-left: 2rem;
+    float: right;
+    clear: right;
+
+    @media (max-width: $breakpoint-mobile) {
+    	padding-left: 0;
+    	float: none;
+    }
+}
+
+.alignleft {
+    padding-right: 2rem;
+    clear: left;
+    float: left;
+
+    @media (max-width: $breakpoint-mobile) {
+    	padding-right: 0;
+    	float: none;
+    }
+}

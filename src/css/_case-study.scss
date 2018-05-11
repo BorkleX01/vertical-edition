@@ -1,0 +1,34 @@
+.case-study {
+	padding-bottom: 2rem;
+	padding-top: 1rem;
+	width: 280px;
+
+	@media (max-width: $breakpoint-mobile) {
+        width: 100%;
+    }
+
+	h4 {
+		text-transform: uppercase;
+		color: $color-blue-afr; 
+		text-align: center;
+		font-size: 0.8rem;
+	}
+
+	h3 {
+		font-size: 1.15rem;
+	}
+
+	&-inner {
+	    text-align: center;
+	    background-color: white;
+	    box-shadow: $box-shadow;
+
+	    img {
+	    	margin: 0;
+	    }
+	}
+
+	&-body {
+		padding: 0.5rem 1rem 0.5rem;
+	}
+}

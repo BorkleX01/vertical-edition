@@ -1,0 +1,142 @@
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	margin-left: -2rem;
+	margin-right: -2rem;
+
+	@media (max-width: $breakpoint-mobile) {
+		margin: 0;
+	}
+
+	> div {
+		flex-basis: 100%;
+		width: 100%;
+		max-width: 100%;
+		padding: 0 2rem;
+
+		@media (max-width: $breakpoint-mobile) {
+			padding: 0;
+		}
+	}
+
+	.tablet {
+		@media (min-width: $breakpoint-mobile + 1) {
+			&-100 {
+				flex-basis: 100%;
+				width: 100%;
+				max-width: 100%;
+				padding: 0 2rem;
+			}
+
+			&-75 {
+				flex-basis: 75%;
+				width: 75%;
+				max-width: 75%;
+				padding: 0 2rem;			
+			}
+
+			&-66 {
+				flex-basis: 66.6666667%;
+				width: 66.6666667%;
+				max-width: 66.6666667%;
+				padding: 0 2rem;			
+			}
+
+			&-50 {
+				flex-basis: 50%;
+				width: 50%;
+				max-width: 50%;
+				padding: 0 2rem;
+			}
+
+			&-33 {
+				flex-basis: 33.3333333%;
+				width: 33.3333333%;
+				max-width: 33.3333333%;
+				padding: 0 2rem;			
+			}
+
+			&-25 {
+				flex-basis: 25%;
+				width: 25%;
+				max-width: 25%;
+				padding: 0 2rem;			
+			}
+		}
+	}
+
+	.desktop {
+		@media (min-width: $breakpoint-tablet + 1) {
+			&-100 {
+				flex-basis: 100%;
+				width: 100%;
+				padding: 0 2rem;
+				max-width: 100%;
+			}
+
+			&-75 {
+				flex-basis: 75%;
+				width: 75%;
+				max-width: 75%;
+				padding: 0 2rem;			
+			}
+
+			&-66 {
+				flex-basis: 66.6666667%;
+				width: 66.6666667%;
+				max-width: 66.6666667%;
+				padding: 0 2rem;			
+			}
+
+			&-50 {
+				flex-basis: 50%;
+				width: 50%;
+				max-width: 50%;
+				padding: 0 2rem;
+			}
+
+			&-33 {
+				flex-basis: 33.3333333%;
+				width: 33.3333333%;
+				max-width: 33.3333333%;
+				padding: 0 2rem;			
+			}
+
+			&-25 {
+				flex-basis: 25%;
+				width: 25%;
+				max-width: 25%;
+				padding: 0 2rem;			
+			}
+		}
+	}
+
+	> div {
+		& + div {
+			margin-left: 0;
+		}
+	}
+
+	.bar-right {
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 10%;
+			bottom: 10%;
+			width: 2px;
+			background: white;
+		}
+
+		@media (max-width: $breakpoint-mobile) {
+			position: static;
+
+			&:after {
+				content: none;
+			}
+		}
+	}
+}

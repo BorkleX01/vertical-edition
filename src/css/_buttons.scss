@@ -1,0 +1,28 @@
+.button,
+button {
+    display: inline-block;
+    padding: 0.6rem 3rem;
+    font-family: SeucaSans;
+    font-size: 0.8rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: $color-base;
+    background-color: $color-white;
+    transition: background-color 0.2s ease-in-out;
+    border: 1px solid lighten($color-gray, 20%);
+
+    &:hover {
+        background-color: darken($color-white, 10%);
+    }
+}
+
+.afr-button {
+    background-color: $color-blue-afr;
+    color: white;
+    border: none;
+
+    &:hover {
+        background-color: darken($color-blue-afr, 10%);
+    }
+}

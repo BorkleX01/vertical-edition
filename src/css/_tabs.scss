@@ -1,0 +1,28 @@
+.tabs {
+	&-nav {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	&-content {
+		overflow: hidden;
+	}
+
+	.tab {
+
+	}
+
+	.tab-pane {
+		display: none;
+		
+		&.show {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,91 @@
+.breakout {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    position: relative;
+    width: 280px;
+
+    @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        color: $color-blue-afr; 
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    &-inner {
+        background-color: white;
+        box-shadow: $box-shadow;
+
+        img {
+            margin: 0;
+        }
+    }
+
+    &-body {
+        padding: 1.5rem 1rem 0.5rem;
+
+        p {
+            margin: 0.25rem 0 0.25rem 0;
+            font-size: 0.9rem;
+            line-height: 1.3;
+
+            &:first-of-type {
+                margin-right: 0;
+                font-size: 0.8rem;
+                font-family: SeucaSans;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        h3, h2 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &-ribbon{
+        position:absolute;
+        top: 3rem;
+        right: -0.25rem;
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-image: url('./images/winner-badge.png');
+        width: 7rem;
+        height: 9.5rem;
+
+        &-inner {
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+            right: 0rem;
+            bottom: 2.5rem;
+            padding: 0 0.75rem;
+        }
+
+        &-text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            line-height: 1;
+
+            .winner {
+                font-size: 0.65rem;
+                padding-bottom: 0.25rem;
+            }
+
+            .name {
+                font-size: 1rem;
+            }
+        }
+    }
+}

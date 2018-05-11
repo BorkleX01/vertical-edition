@@ -1,0 +1,57 @@
+.brand-logo {
+    img {
+        max-width:150px;
+    }
+}
+
+.org-profile {
+    .org-profile-field{
+        flex-basis: 25%;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+
+        @media (max-width: $breakpoint-mobile) {
+            flex-basis: 100%;
+            text-align: center;
+        }
+    }
+
+    .field-name {
+        font-family: SeucaSans;
+        font-size: 0.8rem;
+        color: grey;
+        line-height: 1.2;
+    }
+
+    .field-value {
+        padding-top: 0.5rem;
+        font-size: 0.9rem;
+        line-height: 1.4;
+
+        * {
+            margin: 0;
+        }
+    }
+
+    .field-value.large{
+        font-size: 1.25rem
+    }
+
+    .Collapsible__trigger {
+        margin-top: 0.5rem;
+    }
+
+    .Collapsible__contentInner {
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin-top: 2rem;
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+
+        .afr-button {
+            margin: 0 auto;
+        }
+    }
+}

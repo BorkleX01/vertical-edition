@@ -1,0 +1,51 @@
+.share-icons {
+	display: flex;
+	justify-content: center;
+	margin: 1rem 0 2rem;
+
+	& > div {
+		padding-left: 0.125rem;
+		padding-right: 0.125rem;
+
+	    &:nth-child(1) {
+	    	padding-left: 0;
+	    }
+
+	    &:nth-child(-1) {
+	    	padding-right: 0;
+	    }
+	}
+
+	.social-icon {
+		circle {
+			stroke: $color-gray !important;
+			transition: stroke 0.2s ease-in-out;
+		}
+
+		path {
+			fill: $color-base;
+		}
+	}
+
+	.SocialMediaShareButton {
+		cursor: pointer;
+
+		&:hover {
+			.social-icon {
+				circle {
+					stroke: $color-black !important;
+				}
+			}
+		}
+
+		&--link {
+			position: relative;
+			overflow: hidden;
+
+			.copy-link {
+				position: absolute;
+				top: -80px;
+			}
+		}
+	}
+}

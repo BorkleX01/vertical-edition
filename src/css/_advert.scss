@@ -1,0 +1,152 @@
+.advert {
+	text-align: center;
+	margin-bottom: 7rem;
+	position: relative;
+
+	&:after {
+		content: 'Advertisement';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		color: lighten($color-gray, 20%);
+		transform: translate(0, 100%);
+		font-family: SeucaSans;
+		font-size: 0.7rem;
+		padding-top: 0.25rem;
+	}
+
+	@media (max-width: $breakpoint-max) {
+		margin-bottom: 7rem;
+	}
+
+	@media (max-width: $breakpoint-tablet) {
+		margin-bottom: 4rem;
+	}
+
+	@media (max-width: $breakpoint-mobile) {
+		margin-bottom: 3rem;
+	}
+
+	img {
+	    max-width:100%;
+	    height:auto;
+	    border: 1px solid lighten($color-gray, 40%);
+	}
+
+	p {
+		margin: 0;
+		padding: 0;
+		line-height: 0;
+	}
+
+	& > div {
+		overflow: hidden;
+	}
+
+	.billboard {
+		@media (min-width: $breakpoint-tablet + 1) {
+			img {
+			    max-width: 100%;
+			    height: auto;
+			    max-height: 250px;
+			}
+		}
+	}
+
+	.static-scroller,
+	.ss-fullwidth2000,
+	.ss-fullwidth1500 {
+		@media (min-width: $breakpoint-tablet + 1) {
+			position: relative;
+			padding-top: 300px;
+			
+			img {
+				width: auto;
+				height: 100%;
+				max-width: none;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	/* DESKTOP */
+	@media (min-width: $breakpoint-tablet + 1) {
+	    p:nth-child(1){
+	        display: block;
+	    }
+	    p:nth-child(2){
+	        display: none;
+	    }
+	    p:nth-child(3){
+	        display: none;
+	    }
+	}
+
+	/* TABLET */
+	@media (max-width: $breakpoint-tablet) {
+	    p:nth-child(1){
+	        display: none;
+	    }
+	    p:nth-child(2){
+	        display: block;
+	    }
+	    p:nth-child(3){
+	        display: none;
+	    }
+	}
+	/* MOBILE */
+	@media (max-width: $breakpoint-mobile){
+	    p:nth-child(1){
+	        display: none;
+	    }
+	    p:nth-child(2){
+	        display: none;
+	    }
+	    p:nth-child(3){
+	        display: block;
+	    }
+	}
+}
+
+/*Advert*/
+// .advert {
+
+// }
+// .advert > div{
+//    margin-left: auto;
+//    margin-right: auto;
+// }
+// .advert .static-scroller {
+//    width: 100%;
+//    max-width:960px;
+// }
+
+// .advert .ss-fullwidth1500
+// {
+//    width: 100%;
+//    min-height: 300px;
+//    max-width:1500px;
+
+
+// }
+
+// .advert .ss-fullwidth2000
+// {
+//    width: 100%;
+//    min-height: 300px;
+//    max-width:2000px;
+// }
+
+// .advert .billboard {
+//    width: 75%;
+//    max-width: 970px;
+// }
+
+// .advert img {
+//    width:100%;
+//    height:auto;
+// }
